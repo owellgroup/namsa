@@ -30,21 +30,7 @@ import type {
 } from '../types';
 
 
-const API_BASE_URL = (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_API_BASE_URL)
-  || (typeof window !== 'undefined' && (window as any)?.VITE_API_BASE_URL)
-  || 'https://api.owellserver.ggff.net';
-
-// Warn if base URL looks like the current origin (likely misconfigured in dev)
-if (typeof window !== 'undefined') {
-  const currentOrigin = window.location.origin;
-  try {
-    const apiOrigin = new URL(API_BASE_URL, currentOrigin).origin;
-    if (apiOrigin === currentOrigin && !/owellgraphics\.com$/.test(apiOrigin)) {
-      // eslint-disable-next-line no-console
-      console.warn('[API] Base URL appears to point to the frontend origin. Check VITE_API_BASE_URL.');
-    }
-  } catch {}
-}
+const API_BASE_URL = 'https://api.owellserver.ggff.net';
 
 // Create axios instance
 const api = axios.create({
