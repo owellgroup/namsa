@@ -32,7 +32,7 @@ import type {
 
 const API_BASE_URL = (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_API_BASE_URL)
   || (typeof window !== 'undefined' && (window as any)?.VITE_API_BASE_URL)
-  || 'https://api.owellgraphics.com';
+  || 'https://api.owellserver.ggff.net';
 
 // Warn if base URL looks like the current origin (likely misconfigured in dev)
 if (typeof window !== 'undefined') {
