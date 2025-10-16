@@ -163,7 +163,7 @@ export const artistAPI = {
         'Content-Type': 'multipart/form-data',
       },
     });
-    return response.data;
+    return response.data; //
   },
 
   deletePassportPhotoByUser: async (): Promise<{ message: string }> => {
