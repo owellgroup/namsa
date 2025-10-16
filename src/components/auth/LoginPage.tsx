@@ -198,21 +198,14 @@ const LoginPage: React.FC = () => {
       {/* Logo Section */}
       <div className="flex-1 flex flex-col items-center justify-center p-4 space-y-8">
         <div className="text-center space-y-6">
-          <div className="mx-auto w-40 h-20 relative">
+          <div className="mx-auto w-60 h-25 relative">
             <img 
               src={namsaLogo} 
               alt="NAMSA Logo" 
               className="w-full h-full object-contain drop-shadow-lg"
             />
           </div>
-          <div>
-            <h1 className="text-4xl font-bold bg-gradient-namsa bg-clip-text text-transparent mb-2">
-              NAMSA
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Namibian Music System Administration
-            </p>
-          </div>
+          
         </div>
 
         {/* Login Panels */}

@@ -165,7 +165,7 @@ const AdminPendingProfiles: React.FC = () => {
       case 'REJECTED':
         return <Badge variant="destructive"><XCircle className="w-3 h-3 mr-1" />REJECTED</Badge>;
       default:
-        return <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" />PENDING</Badge>;
+        return <Badge variant="secondary">PENDING</Badge>;
     }
   };
 

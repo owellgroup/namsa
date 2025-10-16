@@ -21,6 +21,7 @@ import {
   User,
   FileText,
 } from 'lucide-react';
+import namsaLogo from '@/assets/namsa-logo.png';
 import { artistAPI, companyAPI } from '@/services/api';
 import { ArtistWork, ArtistStats, MemberDetails } from '@/types';
 import { useToast } from '@/hooks/use-toast';
@@ -239,7 +240,7 @@ const ArtistDashboard: React.FC = () => {
         <div className="relative overflow-hidden rounded-lg bg-gradient-namsa p-6 text-primary-foreground">
           <div className="relative z-10">
             <h2 className="text-2xl font-bold mb-2">
-              Welcome back, {profile?.firstName || 'Artist'}! 🎵
+              Welcome back, {profile?.firstName || 'Artist'}!
             </h2>
             <p className="text-primary-foreground/80">
               Manage your music, track your performance, and grow your audience with NAMSA.
@@ -247,7 +248,7 @@ const ArtistDashboard: React.FC = () => {
             <div className="mt-4 flex gap-4">
               <div className="px-3 py-2 bg-muted rounded-md text-sm">
                 <span className="text-muted-foreground">Artist ID:</span>
-                <span className="font-semibold ml-2">{(profile as any)?.ArtistId || (profile as any)?.artistId || '-'}</span>
+                <span className="font-semibold ml-2 text-black dark:text-white">{(profile as any)?.ArtistId || (profile as any)?.artistId || '-'}</span>
               </div>
               <div className="px-3 py-2 bg-muted rounded-md text-sm">
                 <span className="text-muted-foreground">IPI:</span>
@@ -302,7 +303,7 @@ const ArtistDashboard: React.FC = () => {
               </div>
               <div>
                 <span className="text-sm text-muted-foreground">Artist ID</span>
-                <div className="text-lg font-semibold">{(profile as any).ArtistId || (profile as any).artistId || '-'}</div>
+                <div className="text-lg font-semibold text-black dark:text-white">{(profile as any).ArtistId || (profile as any).artistId || '-'}</div>
               </div>
             </CardContent>
           </Card>
@@ -345,8 +346,8 @@ const ArtistDashboard: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="hover-scale cursor-pointer" onClick={() => navigate('/artist/upload')}>
             <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-12 h-12 bg-gradient-namsa rounded-full flex items-center justify-center mb-4">
-                <Upload className="w-6 h-6 text-primary-foreground" />
+              <div className="mx-auto w-32 h-32 bg-gradient-namsa rounded-full flex items-center justify-center mb-4">
+                <img src={namsaLogo} alt="NAMSA" className="w-28 h-28 object-contain" />
               </div>
               <CardTitle>Upload New Music</CardTitle>
               <CardDescription>
@@ -357,8 +358,8 @@ const ArtistDashboard: React.FC = () => {
 
           <Card className="hover-scale cursor-pointer" onClick={() => navigate('/artist/music')}>
             <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center mb-4">
-                <Music className="w-6 h-6 text-primary-foreground" />
+              <div className="mx-auto w-32 h-32 bg-gradient-accent rounded-full flex items-center justify-center mb-4">
+                <img src={namsaLogo} alt="NAMSA" className="w-28 h-28 object-contain" />
               </div>
               <CardTitle>Manage Music</CardTitle>
               <CardDescription>
@@ -369,8 +370,8 @@ const ArtistDashboard: React.FC = () => {
 
           <Card className="hover-scale cursor-pointer" onClick={() => navigate('/artist/stats')}>
             <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-12 h-12 bg-namsa-success rounded-full flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-white" />
+              <div className="mx-auto w-32 h-32 bg-namsa-success rounded-full flex items-center justify-center mb-4">
+                <img src={namsaLogo} alt="NAMSA" className="w-28 h-28 object-contain" />
               </div>
               <CardTitle>View Analytics</CardTitle>
               <CardDescription>

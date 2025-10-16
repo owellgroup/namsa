@@ -151,7 +151,7 @@ const LicenseApplicationPage: React.FC = () => {
             <img 
               src={namsaLogo} 
               alt="NAMSA Logo" 
-              className="h-12 object-contain"
+              className="h-20 object-contain"
             />
           </div>
         </div>
