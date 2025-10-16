@@ -157,7 +157,7 @@ export const artistAPI = {
     formData.append('file', file);
     formData.append('imageTitle', imageTitle);
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
-    const response = await api.put('/api/artist2/updatephotobyuser', formData, {
+  const response = await api.put('/api/artist2/updatephotobyuser', formData, {
       headers: {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
         'Content-Type': 'multipart/form-data',
